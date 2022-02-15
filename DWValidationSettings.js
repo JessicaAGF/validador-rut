@@ -1,5 +1,5 @@
 //======================================================
-exports.RUT_GUÍA       = 'RUT_GUÍA';
+exports.RUT_GUIA       = 'RUT_GUIA';
 
 
 //CONNECTION TO DOCUWARE SYSTEM

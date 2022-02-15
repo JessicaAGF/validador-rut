@@ -49,5 +49,5 @@ exports.rutvalidoguia = function (DWFields) {
 		return S?S-1:'k';
 	}
 };
-	return Fn.validaRut(rut);
+	return Promise.resolve(Fn.validaRut(rut));
 }
