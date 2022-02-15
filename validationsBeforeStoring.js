@@ -33,7 +33,7 @@ exports.rutvalidoguía = function (DWFields) {
 	var Fn = {
 	// Valida el rut con su cadena completa "XXXXXXXX-X"
 	validaRut : function (rutCompleto) {
-		rutCompleto = rutCompleto.replace(/., '');
+		rutCompleto = rutCompleto.replace('.', '');
 		if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test( rutCompleto ))
 			return false;
 		var tmp 	= rutCompleto.split('-');
