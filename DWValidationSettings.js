@@ -1,18 +1,12 @@
 //======================================================
-exports.fieldNameDOCTYPE        = 'DOCUMENT_TYPE';
-exports.fieldNameDOCNUMBER      = 'DOCUMENT_NUMBER';
-exports.fieldNameDOCDATE        = 'DOCUMENT_DATE';
-exports.fieldNameSUPPLIER       = 'SUPPLIER_ID';
-exports.fieldNameEMAIL          = 'E_MAIL';
-exports.fieldNameDATE           = 'DUE_DATE';
-exports.fieldNameAMOUNT         = 'NET_AMOUNT';
-exports.fieldNamePROJECT        = 'PROJECT';
+exports.RUT_GUÍA       = 'RUT_GUÍA';
+
 
 //CONNECTION TO DOCUWARE SYSTEM
 exports.DWPlatformUrl           = 'http://localhost/DocuWare/Platform';
-exports.DWPlatformOrganization  = 'Peters Engineering';
-exports.DWPlatformUser          = 'admin';
-exports.DWPlatfromPassword      = 'admin';
+exports.DWPlatformOrganization  = 'Dimacofi';
+exports.DWPlatformUser          = 'apracticadlabs1.admin';
+exports.DWPlatfromPassword      = 'testingbpo';
 
 
 //TRIGGER WORDS FOR DETECTING INVOICES & QUOTES (not case sensitive)
