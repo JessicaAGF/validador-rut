@@ -4,7 +4,7 @@ const unirest = require('unirest');
 
 exports.checkValues = function (DWInputValues) {
 	return new Promise((resolve, reject) => {
-		this.rutvalidoguía(DWInputValues.Values)
+		this.rutvalidoguia(DWInputValues.Values)
 		.then(success => {
 			if (!success) {
 				throw new Error('Ingrese un RUT_GUÍA válido');
@@ -28,7 +28,7 @@ exports.getFieldValue = function (DWIndexFieldCollection, fieldName) {
 	return field.Item;
 }
 
-exports.rutvalidoguía = function (DWFields) {
+exports.rutvalidoguia = function (DWFields) {
 	var rut = this.getFieldValue(DWFields, 'RUT_GUIA');
 	var Fn = {
 	// Valida el rut con su cadena completa "XXXXXXXX-X"
