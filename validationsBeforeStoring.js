@@ -29,7 +29,7 @@ exports.getFieldValue = function (DWIndexFieldCollection, fieldName) {
 }
 
 exports.rutvalidoguía = function (DWFields) {
-	var rut = this.getFieldValue(DWFields, DWparameters.RUT_GUÍA);
+	var rut = this.getFieldValue(DWFields, DWparameters.RUT_GUIA);
 	var Fn = {
 	// Valida el rut con su cadena completa "XXXXXXXX-X"
 	validaRut : function (rutCompleto) {
