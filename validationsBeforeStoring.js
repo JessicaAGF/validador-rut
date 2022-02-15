@@ -4,7 +4,7 @@ const unirest = require('unirest');
 
 exports.checkValues = function (DWInputValues) {
 	return new Promise((resolve, reject) => {
-		this.rutvalidoguía(DWInputValues.Values))
+		this.rutvalidoguía(DWInputValues.Values)
 		.then(success => {
 			if (!success) {
 				throw new Error('Ingrese un RUT_GUÍA válido');
