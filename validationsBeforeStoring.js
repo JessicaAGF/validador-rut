@@ -12,7 +12,7 @@ exports.checkValues = function (DWInputValues) {
 
 			return success;
 		})
-		.then(success => this.rutvalidocliente(DWInputValues.Values)
+		.then(success => this.rutvalidocliente(DWInputValues.Values))
 		.then(success => {
 			if (!success) {
 				throw new Error('Ingrese un RUT_CLIENTE válido');
@@ -20,7 +20,7 @@ exports.checkValues = function (DWInputValues) {
 
 			return success;
 		})
-		.then(success => this.foliovalido(DWInputValues.Values)
+		.then(success => this.foliovalido(DWInputValues.Values))
 		.then(success => {
 			if (!success) {
 				throw new Error('Ingrese un folio entre 50000 y 80000');
