@@ -1,5 +1,7 @@
 //======================================================
 exports.RUT_GUIA       = 'RUT_GUIA';
+exports.RUT_CLIENTE       = 'RUT_CLIENTE';
+exports.FOLIO       = 'FOLIO';
 
 
 //CONNECTION TO DOCUWARE SYSTEM

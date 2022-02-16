@@ -62,7 +62,7 @@ exports.rutvalidocliente = function (DWFields) {
 
 //
 function fvalidate(folio){
-	if (folio > 50000 & folio < 80000){
+	if (folio > 600000 & folio < 800000){
 		return true;
 	}
 	return false;
