@@ -12,12 +12,29 @@ exports.checkValues = function (DWInputValues) {
 
 			return success;
 		})
+		.then(success => this.rutvalidocliente(DWInputValues.Values)
+		.then(success => {
+			if (!success) {
+				throw new Error('Ingrese un RUT_CLIENTE válido');
+			}
+
+			return success;
+		})
+		.then(success => this.foliovalido(DWInputValues.Values)
+		.then(success => {
+			if (!success) {
+				throw new Error('Ingrese un folio entre 50000 y 80000');
+			}
+
+			return success;
+		})
 		.then(success => resolve(true))
 		.catch(function (error){
 			reject(error);
 		})
 	});
 }
+
 
 exports.getFieldValue = function (DWIndexFieldCollection, fieldName) {
 	var field = DWIndexFieldCollection.find(x => x.FieldName == fieldName);
@@ -28,11 +45,28 @@ exports.getFieldValue = function (DWIndexFieldCollection, fieldName) {
 	return field.Item;
 }
 
+exports.foliovalido = function (DWFields) {
+	var folio = this.getFieldValue(DWFields, 'FOLIO');
+	return Promise.resolve(fvalidate(folio));
+}
+
 exports.rutvalidoguia = function (DWFields) {
 	var rut = this.getFieldValue(DWFields, 'RUT_GUIA');
 	return Promise.resolve(validate(rut));
 }
 
+exports.rutvalidocliente = function (DWFields) {
+	var rut = this.getFieldValue(DWFields, 'RUT_CLIENTE');
+	return Promise.resolve(validate(rut));
+}
+
+//
+function fvalidate(folio){
+	if (folio > 50000 & folio < 80000){
+		return true
+	}
+	return false
+}
 function clean (rut) {
   return typeof rut === 'string'
     ? rut.replace(/^0+|[^0-9kK]+/g, '').toUpperCase()
