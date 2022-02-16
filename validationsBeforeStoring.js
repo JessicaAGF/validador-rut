@@ -63,9 +63,9 @@ exports.rutvalidocliente = function (DWFields) {
 //
 function fvalidate(folio){
 	if (folio > 50000 & folio < 80000){
-		return true
+		return true;
 	}
-	return false
+	return false;
 }
 function clean (rut) {
   return typeof rut === 'string'
